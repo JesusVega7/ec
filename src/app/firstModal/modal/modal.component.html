@@ -1,0 +1,22 @@
+<p>modal works!</p>
+<form [formGroup]="addForm"  id="addForm" >
+    <mat-form-field appearance="outline" class="custom-form-field" >
+        <input class="input1rem" class="input1rem" type="text" matInput placeholder="Name" 
+        id="name" #name formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="custom-form-field" >
+        <input class="input1rem" class="input1rem" type="text" matInput placeholder="address" 
+        id="address" #address formControlName="address">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="custom-form-field" >
+        <input class="input1rem" class="input1rem" type="number" matInput placeholder="phone" 
+        id="phone" #phone formControlName="phone">
+    </mat-form-field>
+
+    <button type="submit" mat-button (click)="sub()" >Post</button>
+
+</form>
+
+
+<button class="close" mat-button (click)="onNoClick()">X</button>
