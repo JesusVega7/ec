@@ -17,24 +17,32 @@ export class TableComponentComponent implements OnInit, AfterViewInit {
 
   ) { }
 
+  
   public ELEMENT_DATA : Array<any> = [
     // { name: 'Diego Puto', address: 'Prado bonito', phone: 123123},
     // {position: 1, name: 'Diego Puto', address: 'Prado Bonito', phone: 6669842},
   ];
- dataSource = this.ELEMENT_DATA;
   
-  ngOnInit(): void {
-   this.dataService.dataEmitter.subscribe(data =>{
-      this.ELEMENT_DATA.push(data)
-      console.log('recibiendo data', this.ELEMENT_DATA[0])
-    })
+
+  ngOnInit() {
 
   }
 
   ngAfterViewInit(): void {
-    console.log('asdasd')
-    console.log('asdas122d')
-    console.log('asda55sd')
+    this.getData();
+
   }
 
+  getData(){
+    
+    this.dataService.dataEmitter.subscribe(data =>{
+      this.ELEMENT_DATA.push(data)
+      console.log(this.ELEMENT_DATA, 'elm')
+    })
+  }
+
+  showMsg(){
+    console.log('ehehhe')
+
+  }
 }

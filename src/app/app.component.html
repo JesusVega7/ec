@@ -1,8 +1,53 @@
-<button mat-button color="primary">Primary</button>
+<!-- <button mat-button color="primary">Primary</button>
 
 <app-table-component></app-table-component>
   
-<button mat-raised-button (click)="openDialog()">Pick one</button>
+<button mat-raised-button (click)="openDialog()">Pick one</button> -->
 
 
+  
+
+  <p>
+    <mat-toolbar class="loginBar" color="primary">
+      <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span> -->
+      <button mat-icon-button class="loginButton example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <span>Login</span>
+      </button>
+      <div><button mat-button [matMenuTriggerFor]="boxMenu">What's in my box</button>
+        <mat-menu #boxMenu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu></div>
+      <div><a href="">About</a></div>
+      <div><a href="">Pricing</a></div>
+
+    </mat-toolbar>
+  </p>
+  <div><img class="logo" src="../assets/images/logo-rapido-2.png" alt=""></div>  
+  
+  <p>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <span>My App</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </mat-toolbar-row>
+  
+      <mat-toolbar-row>
+        <span>Second Line</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </p>
 <router-outlet></router-outlet>

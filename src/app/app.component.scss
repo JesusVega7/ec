@@ -1,0 +1,31 @@
+.example-spacer {
+    flex: 1 0.5 auto;
+  }
+
+.loginBar{
+    padding: 0 5.5rem;
+    max-height: 7rem;
+    display:flex;
+    direction: rtl;
+    background-color: #003865;
+    font-size: 1rem;
+
+    .loginButton{
+        margin-left: 7rem;
+    }
+    button{
+        font-size: 1rem;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        margin:0.5rem;
+    }
+}
+.logo{
+    width: 18rem;
+    position: absolute;
+    top: 0;
+    margin-left: 1rem;
+}
