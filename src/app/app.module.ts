@@ -8,6 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { APP_ROUTES } from './app.routes';
 import { ModalComponent } from './firstModal/modal/modal.component';
 import { TableComponentComponent } from './components/table-component/table-component.component';
+import { ApiService } from './services/api/api.service';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,10 +25,13 @@ import { TableComponentComponent } from './components/table-component/table-comp
     MaterialModule,
     FormsModule,
     ReactiveFormsModule, 
+    HttpClientModule,
 
     APP_ROUTES
   ],
-  providers: [],
+  providers: [
+    ApiService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
